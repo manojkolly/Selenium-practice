@@ -24,7 +24,8 @@ public class Questions {
 	browser.manage().window().maximize();
 	//browser.manage().wait(5000);
 	List <WebElement> questions= new ArrayList <WebElement>();
-	questions= browser.findElements(By.xpath(".//a[@class='question-hyperlink']"));
+	//questions= browser.findElements(By.xpath(".//a[@class='question-hyperlink']"));
+	questions= browser.findElements(By.className("question-hyperlink"));
 	int length=questions.size();
 	System.out.println(length);
 	for (int i=0;i<length;i++){
